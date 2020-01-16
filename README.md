@@ -11,27 +11,28 @@ make build
 make run
 ```
 
-Access to localhost:8888, and paste the login token shown in your console.
+Access to the url shown in your console and open jupyterlab
 
 ## Installed Packages & Tools
 
+- git
+- vim
+- node.js (necessary for jupyter extension)
 - mecab
-- mecca-ipadic-neologd
-- python 3.7
-- miniconda environment with the following packages installed;
-  - numpy
-  - pandas
-  - matplotlib(with japanize_matplotlib)
-  - seaborn
-  - sqlalchemy
-  - scikit-learn
-  - beautifulsoup4
-  - tensorflow
-  - keras
-  - gensim
-  - spacy
-  - ja-ginza
-  - mecab-python3
-  - neologdn
-  - emoji
-  - pipetools
+- mecab-ipadic-neologd
+- python 3.7.6 (installed with pyenv)
+- numpy
+- pandas
+- matplotlib(with japanize_matplotlib)
+- seaborn
+- sqlalchemy
+- scikit-learn
+- beautifulsoup4
+- tensorflow
+- gensim
+- spacy
+- ginza
+- mecab-python3
+- neologdn
+- emoji
+- pipetools
