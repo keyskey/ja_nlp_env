@@ -1,0 +1,5 @@
+pre_processor.py
+*.png
+README.md
+.ipynb_checkpoints
+Makefile
