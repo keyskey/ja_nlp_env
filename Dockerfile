@@ -34,7 +34,7 @@ RUN conda install --quiet --yes \
     'keras=2.2*' && \
     conda clean --all -f -y && \
     pip install spacy==2.2.3 \
-    ja-ginza==3.1.0 \
+    'https://github.com/megagonlabs/ginza/releases/download/latest/ginza-latest.tar.gz' \
     japanize-matplotlib==1.0.5 \
     mecab-python3==0.996.3 \
     neologdn==0.4 \
@@ -53,4 +53,3 @@ RUN conda install --quiet --yes \
     fix-permissions /home/$NB_USER
 
 WORKDIR /home/jovyan/work
-
