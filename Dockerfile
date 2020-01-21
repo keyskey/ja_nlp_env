@@ -54,5 +54,4 @@ RUN pip install --default-timeout=1000 \
     scikit-learn==0.22.1 \
     tensorflow==2.1.0 \
     gensim==3.8.1 && \
-    jupyter labextension install jupyterlab_vim && \
-    jupyter labextension install @jupyterlab/toc
+    jupyter labextension install jupyterlab_vim @jupyterlab/toc jupyterlab_filetree
