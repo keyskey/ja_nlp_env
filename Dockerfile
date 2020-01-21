@@ -9,7 +9,7 @@ RUN apt-get update && \
 # git, vim, node, npmを導入
 RUN apt-add-repository -y ppa:git-core/ppa && \
     apt-get update && \
-    apt-get install -y --no-install-recommends git vim curl sudo build-essential make && \
+    apt-get install -y --no-install-recommends git vim curl sudo build-essential make gpg-agent && \
     curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - && \
     apt-get install -y nodejs
 
@@ -44,14 +44,25 @@ RUN pyenv install 3.7.6 && \
 ENV PATH $PATH:/root/.pyenv/shims
 
 # pythonパッケージ群インストール
+# tensorflow==2.1.0
 RUN pip install -U pip && \
-    pip install -U jupyterlab numpy pandas matplotlib japanize-matplotlib seaborn pipetools sqlalchemy beautifulsoup4 ginza
+    pip install -U \
+	jupyterlab \
+	numpy \
+	pandas \
+	matplotlib \
+	japanize-matplotlib \
+	seaborn \
+	pipetools \
+	sqlalchemy \
+	beautifulsoup4 \
+	ginza \
+	wordcloud
 RUN pip install --default-timeout=1000 \
-    mecab-python3==0.996.3 \
-    spacy==2.2.3 \
-    neologdn==0.4 \
-    emoji==0.5.4 \
-    scikit-learn==0.22.1 \
-    tensorflow==2.1.0 \
-    gensim==3.8.1 && \
-    jupyter labextension install jupyterlab_vim @jupyterlab/toc jupyterlab_filetree
+	mecab-python3==0.996.3 \
+	spacy==2.2.3 \
+	neologdn==0.4 \
+	emoji==0.5.4 \
+	scikit-learn==0.22.1 \
+	gensim==3.8.1 && \
+	jupyter labextension install jupyterlab_vim @jupyterlab/toc jupyterlab_filetree
